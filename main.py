@@ -1,10 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
-from dotenv import load_dotenv
 from backend.routes import search
-
-# Load the .env file.
-load_dotenv()
 
 # App.
 app = FastAPI()
