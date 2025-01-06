@@ -1,6 +1,10 @@
-from langchain_community.tools import DuckDuckGoSearchRun
+from langchain_community.tools import DuckDuckGoSearchRun, DuckDuckGoSearchResults
 
 class DuckDuckGo:
-    def search(query: str) -> str:
+    def search(query: str):
         search = DuckDuckGoSearchRun()
-        return search.run(query)
+        return search.invoke(query)
+    
+    def search_results(query: str):
+        results = DuckDuckGoSearchResults()
+        return results.invoke(query)

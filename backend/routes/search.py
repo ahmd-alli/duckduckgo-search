@@ -5,5 +5,5 @@ from backend.interactors import search as search_interactor
 router = APIRouter(tags=['search'],prefix="/api")
 
 @router.get("/search/")
-async def search(query:str) -> str:
+async def search(query:str):
     return search_interactor.call(query)
