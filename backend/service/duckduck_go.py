@@ -5,6 +5,6 @@ class DuckDuckGo:
         search = DuckDuckGoSearchRun()
         return search.invoke(query)
     
-    def search_results(query: str):
-        results = DuckDuckGoSearchResults()
+    def search_results(query: str, keyword: str):
+        results = DuckDuckGoSearchResults(backend = keyword)
         return results.invoke(query)
